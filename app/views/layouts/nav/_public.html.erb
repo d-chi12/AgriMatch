@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <a class="navbar-brand" href="<%= account_signed_in? ? dashboard_path : root_path %>">GoodHomeSeeker</a>
+  <a class="navbar-brand" href="<%= account_signed_in? ? dashboard_path : root_path %>">AgriMatch</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -10,21 +10,21 @@
         <% if account_signed_in? %>
         <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
         <% else %>
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">概要 <span class="sr-only">(current)</span></a>
         <% end %>
       </li>
       
       <li class="nav-item">
-        <%= link_to "Blog", blog_path, class: "nav-link" %>
+        <%= link_to "ブログ", blog_path, class: "nav-link" %>
       </li>
       
     </ul>
 
     <% if account_signed_in? %>
-      <%= link_to "Log out", destroy_account_session_path, method: :delete, class: "btn btn-success float-sm-right" %>
+      <%= link_to "ログアウト", destroy_account_session_path, method: :delete, class: "btn btn-success float-sm-right" %>
     <% else %>
-      <%= link_to "Log In", new_account_session_path, class: "btn btn-secondary mr-2 float-sm-right" %>
-      <%= link_to "Sing Up", new_account_registration_path, class: "btn btn-success float-sm-right" %>
+      <%= link_to "ログイン", new_account_session_path, class: "btn btn-secondary mr-2 float-sm-right" %>
+      <%= link_to "新規登録", new_account_registration_path, class: "btn btn-success float-sm-right" %>
     <% end %>
   </div>
 </nav>
