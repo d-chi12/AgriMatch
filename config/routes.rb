@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :posts
   resources :properties
 
-  get "/blog" => "posts#latest", as: :blog 
+  get "/blog" => "posts#latest", as: :blog
+  get "/intro" => "intro#index" 
 
   # admin routes
   get "/accounts" => 'admin#accounts', as: :accounts
@@ -14,6 +15,6 @@ Rails.application.routes.draw do
   
   root to: 'public#main'
 
-  get "intro/index" => "intro#index"
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
