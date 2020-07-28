@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   post "/agent/message" => "properties#email_agent", as: :email_agent
   
   root to: 'public#main'
+
+  get "intro/index" => "intro#index"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
