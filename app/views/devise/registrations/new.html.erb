@@ -1,6 +1,6 @@
 <section class="form-auth text-center">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <h1 class="h3 mb-3 font-weight-normal">Please Sign Up</h1>
+    <h1 class="h3 mb-3 font-weight-normal">新規登録</h1>
     <%= render "devise/shared/error_messages", resource: resource %>
 
       <%= f.text_field :first_name, autofocus: true, class: "form-control", placeholder: "First Name" %>
@@ -9,7 +9,7 @@
       <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Password" %>
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Password confirmation" %>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">ログイン</button>
   <% end %>
   <%= render "devise/shared/links" %>
 </section>
