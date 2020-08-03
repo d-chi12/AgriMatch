@@ -1,3 +1,5 @@
+// AfriMatchとは
+
 p-feature, .p-usage {
     padding: 80px 0 72px 0;
     margin: 40px auto 0 auto;
@@ -68,4 +70,44 @@ img {
     font-size: 1rem;
     color: #444;
     line-height: 1.8em;
+}
+
+
+// 取う仕事の例
+
+.p-usage--example {
+    border-top: 1px solid #CDD1AA;
+    padding: 32px 0;
+}
+
+.l-container, .l-container--pc {
+    /* position: relative; */
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.p-usage--example__title {
+    margin: 0 auto 2em auto;
+    font-size: 2.5rem;
+    color: #015a31;
+    text-align: center;
+}
+
+.p-usage--example__task {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.p-usage--example__item {
+    width: 17%;
+    text-align: center;
+    color: #009350;
+    font-size: 1.75rem;
 }
