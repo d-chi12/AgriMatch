@@ -111,3 +111,90 @@ img {
     color: #009350;
     font-size: 1.75rem;
 }
+
+// AgriMatch blog
+
+.p-mynavi-agriculture {
+    margin: 40px auto 0 auto;
+    padding: 64px 0;
+    background: #009350;
+    color: #fff;
+}
+
+.l-container, .l-container--pc {
+    /* position: relative; */
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.p-mynavi-agriculture__title {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.p-mynavi-agriculture__description {
+    margin: 32px 0 64px 0;
+    text-align: center;
+}
+
+.p-mynavi-agriculture__posts {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.p-mynavi-agriculture__item {
+    width: 31%;
+    background: #fff;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+    -webkit-transition: .2s ease;
+    transition: .2s ease;
+}
+
+.p-mynavi-agriculture__item__image {
+    padding-top: 75%;
+    position: relative;
+}
+
+.p-mynavi-agriculture__item__tags {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 17px 28px 0 28px;
+}
+
+.p-mynavi-agriculture__item__tag-item {
+    background: #8EC43D;
+    color: #fff;
+    margin: 0 8px 0 0;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.p-mynavi-agriculture__item__title {
+    padding: 20px 40px;
+    color: #666;
+}
+
+.p-mynavi-agriculture__item__description {
+    line-height: 1.8;
+    padding: 0 40px 40px 40px;
+    color: #666;
+}
+
