@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark navbar-color">
   <a class="navbar-brand" href="<%= account_signed_in? ? dashboard_path : root_path %>">AgriMatch</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -23,8 +23,8 @@
     <% if account_signed_in? %>
       <%= link_to "ログアウト", destroy_account_session_path, method: :delete, class: "btn btn-success float-sm-right" %>
     <% else %>
-      <%= link_to "ログイン", new_account_session_path, class: "btn btn-secondary mr-2 float-sm-right" %>
-      <%= link_to "新規登録", new_account_registration_path, class: "btn btn-success float-sm-right" %>
+      <%= link_to "ログイン", new_account_session_path, class: "btn btn-color mr-2 float-sm-right" %>
+      <%= link_to "新規登録", new_account_registration_path, class: "btn btn-color float-sm-right" %>
     <% end %>
   </div>
 </nav>
