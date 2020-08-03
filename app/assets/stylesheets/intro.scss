@@ -1,0 +1,71 @@
+p-feature, .p-usage {
+    padding: 80px 0 72px 0;
+    margin: 40px auto 0 auto;
+    width: 92%;
+    background: #FFFFDE;
+}
+
+.l-container, .l-container--pc {
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.p-feature__title {
+    text-align: center;
+    margin: 0 0 1.5em 0;
+    font-size: 4.25rem;
+    background: url(../images/ttl01_bg.png) center 0.3em no-repeat;
+    background-size: 3.5em auto;
+    color: #015a31;
+}
+
+.p-feature__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.p-feature__item {
+    width: 32%;
+    background: #fff;
+    border: 1px solid #009350;
+    border-radius: 20px;
+    padding: 1.8em 2em 2.4em 2em;
+}
+
+.p-feature__item__icon {
+    display: block;
+    width: 90px;
+    margin: 28px auto 40px auto;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+img {
+    border-style: none;
+}
+
+.p-feature__item__title {
+    color: #009350;
+    text-align: center;
+    margin: 0 0 32px 0;
+    font-size: 1.875rem;
+}
+
+.p-feature__item__description {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.8em;
+}
