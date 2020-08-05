@@ -1,33 +1,18 @@
-<h1 class="h3">物件情報</h1>
+<h1 class="h3">農家情報</h1>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>名前</th>
-      <th>住所</th>
-      <th>値段</th>
-      <th>部屋</th>
-      <th>寝室</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% @properties.each do |property| %>
+  <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+    <div class="property border">
 
-  <tbody>
-    <% @properties.each do |property| %>
-      <tr>
-        <td><%= property.name %></td>
-        <td><%= property.address %></td>
-        <td><%= property.price %></td>
-        <td><%= property.rooms %></td>
-        <td><%= property.bethrooms %></td>
-        <td><%= link_to 'Show', property %></td>
-        <td><%= link_to 'Edit', edit_property_path(property) %></td>
-        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="property-thumb" style="background-image: url(<%= property_thumbnail_url(property) %>)">
+        <%= link_to "", property_path(property) %>
+      </div>
 
-<br>
-
-<%= link_to 'New Property', new_property_path %>
+      <div class="property-summary p-3">
+        <h3 class="h5"><%= link_to property.name, property_path(property), class: "text-dark" %></h3>
+        <p class="mt-2"><%= property.type %>
+        <p class="mt-2"><%= property.address %></p>
+      </div>  
+    </div>
+  </div>
+<% end %>
