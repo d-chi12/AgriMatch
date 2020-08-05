@@ -16,11 +16,17 @@ p-feature, .p-usage {
 
 .p-feature__title {
     text-align: center;
-    margin: 0 0 1.5em 0;
+    margin: 1.5em 0 1.5em 0;
     font-size: 4.25rem;
     background: url(../images/ttl01_bg.png) center 0.3em no-repeat;
     background-size: 3.5em auto;
     color: #015a31;
+}
+
+.p-feature__text {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 0 5em 0;
 }
 
 .p-feature__wrapper {

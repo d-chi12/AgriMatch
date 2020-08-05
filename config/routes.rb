@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'public#main'
+  
   devise_for :accounts
   resources :posts
   resources :properties
@@ -13,7 +15,6 @@ Rails.application.routes.draw do
   get "/profile/:id" => 'dashboard#profile', as: :profile 
   post "/agent/message" => "properties#email_agent", as: :email_agent
   
-  root to: 'public#main'
   
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
