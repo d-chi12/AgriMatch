@@ -10,9 +10,15 @@
 
       <div class="property-summary p-3">
         <h3 class="h5"><%= link_to property.name, property_path(property), class: "text-dark" %></h3>
-        <p class="mt-2"><%= property.type %>
+        <%
+=begin%>
+ <p class="mt-2"><%= property.type %> 
+<%
+=end%>
         <p class="mt-2"><%= property.address %></p>
       </div>  
     </div>
   </div>
 <% end %>
+
+<%= link_to 'New Property', new_property_path %>
