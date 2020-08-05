@@ -70,7 +70,7 @@ class PostsController < ApplicationController
     def can_access?
       @show_sidebar = true
   
-    unless current_account.admin?
+    unless current_account
       redirect_to root_url, flash: { danger: "You do not have access to view this page" }
     end
 
