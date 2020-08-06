@@ -1,24 +1,22 @@
-<h1 class="h3">農家情報</h1>
+<section id="latest-properties" class="mb-5">
+  <div class="container">
+    <div class="row">
+      <% @properties.each do |property| %>
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+          <div class="property border">
+            <div class="property-thumb" style="background-image: url(<%= property_thumbnail_url(property) %>)">
+              <%= link_to "", property_path(property) %>
+            </div>
+          </div>
 
-<% @properties.each do |property| %>
-  <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
-    <div class="property border">
-
-      <div class="property-thumb" style="background-image: url(<%= property_thumbnail_url(property) %>)">
-        <%= link_to "", property_path(property) %>
-      </div>
-
-      <div class="property-summary p-3">
-        <h3 class="h5"><%= link_to property.name, property_path(property), class: "text-dark" %></h3>
-        <%
-=begin%>
- <p class="mt-2"><%= property.type %> 
-<%
-=end%>
-        <p class="mt-2"><%= property.address %></p>
-      </div>  
+          <div class="property-summary p-3">
+            <h3 class="h5"><%= link_to property.name, property_path(property), class: "text-dark" %></h3>
+            <p class="mt-2"><%= property.address %></p>
+          </div>  
+        </div>
+      <% end %>
     </div>
   </div>
-<% end %>
+</section>
 
 <%= link_to 'New Property', new_property_path %>

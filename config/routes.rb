@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   
   # admin routes
   get "/public" => "public#main", as: :public
+  get "/accounts" => 'admin#accounts', as: :accounts
   
   get "/dashboard" => 'dashboard#index', as: :dashboard 
   get "/profile/:id" => 'dashboard#profile', as: :profile 
