@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get "/intro" => "intro#index", as: :intro
   
   # admin routes
-  get "/accounts" => 'admin#accounts', as: :accounts
+  get "/public" => "public#main", as: :public
   
   get "/dashboard" => 'dashboard#index', as: :dashboard 
   get "/profile/:id" => 'dashboard#profile', as: :profile 

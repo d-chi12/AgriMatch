@@ -3,7 +3,6 @@ class AdminController < ApplicationController
 
   def accounts
     @accounts = Account.all
-    @agent_account = Account.where(account_id: @agent.id).where.not(id: @account.id)
   end
 
   def can_access?
