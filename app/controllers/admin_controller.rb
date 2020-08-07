@@ -9,7 +9,7 @@ class AdminController < ApplicationController
     @show_sidebar = true
 
     unless current_account
-      redirect_to root_url, flash: { danger: "You do not have access to view this page" }
+      redirect_to root_url, flash: { danger: "このページを表示するアクセス権がありません" }
     end
   end
 end

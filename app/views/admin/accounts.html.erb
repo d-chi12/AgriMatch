@@ -1,25 +1,8 @@
-<h2>アカウント</h2>
-
 <% @accounts.each do |account| %>
   <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
     <div class="account border">
-      <div class="account-thumb" style="background-image: url(<%= account_thumbnail_url(account) %>)">
-        <%
-=begin%>
- <%= link_to "", account_path(account) %> 
-<%
-=end%>
-      </div>
-
-      <%
-=begin%>
- <div class="account-summary p-3">
-        <h3 class="h5"><%= link_to account.name, account_path(account), class: "text-dark" %></h3>
-
-        <p class="mt-2"></p>
-      </div>   
-<%
-=end%>
+      <div class="property-thumb">
+      <%= profile_picture @agent %>
     </div>
   </div>
 <% end %>
