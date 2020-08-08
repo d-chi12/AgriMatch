@@ -13,5 +13,11 @@ class Account < ApplicationRecord
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def account_thumbnail account
+    img = account.photo.present? ? account.photo.thumb.url : "noimage.png"
+    image_tag img, class: "account-thumb"
+  end
+
   
 end
