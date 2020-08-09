@@ -42,7 +42,7 @@
     <% if @minimum_password_length %>
       <em><%= @minimum_password_length %> 文字以上で登録してください。</em>
     <% end %>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
   </div>
 
   <div class="field">

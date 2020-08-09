@@ -5,21 +5,18 @@
       <p>日本中の農家やAgriMatchを利用した人の体験など、お家から参加できるユニークなBlog。</p>
     </div>
   </div>
-</main>
 
-<div class="container">
-<% if @posts.empty? %>
-  <p>投稿はまだありません。</p>
-<% else %>
-  <% @posts.each do |post| %>
-    <div class="row">
-      <div class="col">
-        <h2><%= post.title %></h2>
-        <p><%= post.summary %></p>
-        <%= link_to "Read more", post_path(post), class: "btn btn-success" %>
-        <hr />
+  <section id="latest-properties" class="mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3 class="mb-3">農家一覧</h3>
+        </div>
+      </div>
+      <div class="row">
+        <%= render "posts/list", posts: @posts %>
       </div>
     </div>
-  <% end %>
-<% end %>
-</div>
+  </section>
+
+</main>
