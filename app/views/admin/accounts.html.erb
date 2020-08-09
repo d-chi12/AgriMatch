@@ -2,11 +2,16 @@
   <div class="container">
     <div class="row">
       <% @accounts.each do |account| %>
-        <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+        <div class="col-sm-6 col-md-4 col-lg-3 bottom">
           <div class="property-thumb border">
-            <div class="property-thumb" style="background-image: url(<%= account_thumbnail_url(account) %>)">    
-            <%= link_to "", profile_path(current_account) %>
+            <div class="property border">
+              <div class="property-thumb" style="background-image: url(<%= account_thumbnail_url(account) %>)">    
+                <%= link_to "", profile_path(account) %>
               </div>
+              <div class="property-summary p-3">
+                <h3 class="h5"><%= link_to account.first_name, profile_path(account), class: "text-dark" %></h3>
+              </div>  
+            </div>
           </div>
         </div>
       <% end %>
