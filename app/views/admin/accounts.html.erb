@@ -1,8 +1,20 @@
-<% @accounts.each do |account| %>
-  <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
-    <div class="account border">
-      <div class="account-thumb">
-        <div class="account-thumb" style="background-image: url(<%= account_thumbnail_url(account) %>)">
+<section id="latest-properties" class="mb-5">
+  <div class="container">
+    <div class="row">
+      <% @accounts.each do |account| %>
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+          <div class="property border">
+            <div class="property-thumb" style="background-image: url(<%= account_thumbnail_url(account) %>)">
+                <%
+=begin%>
+ <%= link_to "", property_path(property) %> 
+<%
+=end%>
+              </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
-<% end %>
+</section>
+

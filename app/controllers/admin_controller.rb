@@ -3,6 +3,7 @@ class AdminController < ApplicationController
 
   def accounts
     @accounts = Account.all
+    @account = Account.find_by(params[:id])
   end
 
   def can_access?
@@ -12,4 +13,5 @@ class AdminController < ApplicationController
       redirect_to root_url, flash: { danger: "このページを表示するアクセス権がありません" }
     end
   end
+  
 end
