@@ -6,6 +6,26 @@
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
+      <% if account_signed_in? %>
+
+      <li class="nav-item">
+        <%= link_to accounts_path, class: "nav-link" do %>
+          アカウント <span class="sr-only">(current)</span>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to properties_path, class: "nav-link" do %>
+          農家情報
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to posts_path, class: "nav-link" do %>
+          ブログ投稿
+        <% end %>
+      </li>
+    
+    <% else %>
+
       <li class="nav-item">
           <a class="nav-link" href="/intro">概要<span class="sr-only">(current)</span></a>
       </li>
@@ -13,7 +33,9 @@
       <li class="nav-item">
         <%= link_to "ブログ", blog_path, class: "nav-link" %>
       </li>
-      
+
+    <% end %>
+
     </ul>
 
     <% if account_signed_in? %>
