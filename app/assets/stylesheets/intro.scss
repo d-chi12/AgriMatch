@@ -1,3 +1,7 @@
+ul {
+  list-style: none;
+}
+
 // AfriMatchとは
 
 .p-feature, .p-usage {
@@ -82,7 +86,6 @@ img {
 // 取う仕事の例
 
 .p-usage--example {
-    border-top: 1px solid #CDD1AA;
     padding: 32px 0;
 }
 
@@ -204,3 +207,6 @@ img {
     color: #666;
 }
 
+.icon-bottom {
+    margin-bottom: 10%;
+}
