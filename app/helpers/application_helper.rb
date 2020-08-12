@@ -4,7 +4,7 @@ module ApplicationHelper
     thumb = account.image.present? ? account.image.thumb.url : "noimage.png"
     image_tag thumb, width: width, class: "profile-pic img-circle"
   end
-
+  
   def flash_notifications
     flash_messages = []
 
@@ -17,6 +17,5 @@ module ApplicationHelper
 
     "<script>$(function(){ #{ flash_messages.join("\n") } });</script>".html_safe if flash_messages.any?
   end
-
 
 end
