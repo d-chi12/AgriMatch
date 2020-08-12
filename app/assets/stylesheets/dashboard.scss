@@ -68,6 +68,34 @@
   text-transform: uppercase;
 }
 
+#gnav {
+  position: fixed;
+  z-index: 2;
+  width: 200px;
+  height: 360px;
+  top: 250px;
+  left: 30px;
+  background-color: #555;
+}
+
+#logo {
+  position: fixed;
+  z-index: 2;
+  display: table;
+  width: 200px;
+  height: 180px;
+  top: 70px;
+  left: 30px;
+  padding: 0;
+  overflow: hidden;
+  background: image-url("green.jpg");
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
 /*
  * Navbar
  */
