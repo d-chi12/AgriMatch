@@ -3,5 +3,10 @@
     <div class="row">
       <%= render "properties/list", properties: @properties %>
     </div>
+    <div class="col-lg-2">
+      <button class="btn btn-block btn-info mb-1">
+        <%= link_to 'New Match', new_property_path, :style=>"color:#fff;" %>
+      </button>
+    </div>
   </div>
 </section>

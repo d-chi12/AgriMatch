@@ -23,6 +23,11 @@
           ブログ
         <% end %>
       </li>
+      <li class="nav-item">
+        <%= link_to profile_path(current_account), class: "nav-link" do %>
+          Myページ
+        <% end %>
+      </li>
     
     <% else %>
 
@@ -39,6 +44,8 @@
     </ul>
 
     <% if account_signed_in? %>
+      <%= link_to 'New Match', new_property_path, :style=>"color:#fff;" %>
+      <%= link_to 'ブログ更新', new_post_path, :style=>"color:#fff;" %>
       <%= link_to "ログアウト", destroy_account_session_path, method: :delete, class: "btn btn-success float-sm-right" %>
     <% else %>
       <%= link_to "ログイン", new_account_session_path, class: "btn btn-color mr-2 float-sm-right" %>

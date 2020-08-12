@@ -3,6 +3,11 @@
     <div class="row">
       <%= render "posts/list", posts: @posts %>
     </div>
+    <div class="col-lg-2">
+      <button class="btn btn-block btn-success mb-1">
+        <%= link_to 'ブログ更新', new_post_path, :style=>"color:#fff;" %>
+      </button>
+    </div>
   </div>
 </section>
 
