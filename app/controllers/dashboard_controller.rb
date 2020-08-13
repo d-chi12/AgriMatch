@@ -1,6 +1,5 @@
 class DashboardController < ApplicationController
-  before_action :set_sidebar
-
+  before_action
   def index
   end
 
@@ -16,9 +15,5 @@ class DashboardController < ApplicationController
     @properties_for_rent = Property.where(account_id: @account.id).for_rent.count
   end
 
-  private
-
-  def set_sidebar
-    @show_sidebar = true if account_signed_in?
-  end
+  
 end

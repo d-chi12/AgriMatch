@@ -6,21 +6,26 @@
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-    <% if account_signed_in? %>
+      <% if account_signed_in? %>
 
       <li class="nav-item">
         <%= link_to accounts_path, class: "nav-link" do %>
-          アカウント <span class="sr-only">(current)</span>
+          農家一覧 <span class="sr-only">(current)</span>
         <% end %>
       </li>
       <li class="nav-item">
         <%= link_to properties_path, class: "nav-link" do %>
-          農家情報
+          新規募集
         <% end %>
       </li>
       <li class="nav-item">
         <%= link_to posts_path, class: "nav-link" do %>
-          ブログ投稿
+          ブログ
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to profile_path(current_account), class: "nav-link" do %>
+          Myページ
         <% end %>
       </li>
     
@@ -36,14 +41,31 @@
 
     <% end %>
 
-      
     </ul>
-
-    <% if account_signed_in? %>
-      <%= link_to "ログアウト", destroy_account_session_path, method: :delete, class: "btn btn-success float-sm-right" %>
-    <% else %>
-      <%= link_to "ログイン", new_account_session_path, class: "btn btn-color mr-2 float-sm-right" %>
-      <%= link_to "新規登録", new_account_registration_path, class: "btn btn-color float-sm-right" %>
-    <% end %>
+  
+    <ul class="navbar-nav">
+      <% if account_signed_in? %>
+        <li class="nav-item">
+          <%= link_to new_property_path, class: "nav-link" do %>
+            New Match
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to new_post_path, class: "nav-link" do %>
+            ブログ更新
+          <% end %>
+        </li>
+        <li class="nav-item">  
+          <%= link_to "ログアウト", destroy_account_session_path, method: :delete, class: "btn btn-success float-sm-right" %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "ログイン", new_account_session_path, class: "btn btn-color mr-2 float-sm-right" %>
+        </li>
+        <li class="nav-item">  
+          <%= link_to "新規登録", new_account_registration_path, class: "btn btn-color float-sm-right" %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </nav>

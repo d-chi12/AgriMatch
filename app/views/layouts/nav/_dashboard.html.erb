@@ -42,14 +42,30 @@
     <% end %>
 
     </ul>
-
-    <% if account_signed_in? %>
-      <%= link_to 'New Match', new_property_path, :style=>"color:#fff;" %>
-      <%= link_to 'ブログ更新', new_post_path, :style=>"color:#fff;" %>
-      <%= link_to "ログアウト", destroy_account_session_path, method: :delete, class: "btn btn-success float-sm-right" %>
-    <% else %>
-      <%= link_to "ログイン", new_account_session_path, class: "btn btn-color mr-2 float-sm-right" %>
-      <%= link_to "新規登録", new_account_registration_path, class: "btn btn-color float-sm-right" %>
-    <% end %>
+  
+    <ul class="navbar-nav">
+      <% if account_signed_in? %>
+        <li class="nav-item">
+          <%= link_to new_property_path, class: "nav-link" do %>
+            New Match
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to new_post_path, class: "nav-link" do %>
+            ブログ更新
+          <% end %>
+        </li>
+        <li class="nav-item">  
+          <%= link_to "ログアウト", destroy_account_session_path, method: :delete, class: "btn btn-success float-sm-right" %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "ログイン", new_account_session_path, class: "btn btn-color mr-2 float-sm-right" %>
+        </li>
+        <li class="nav-item">  
+          <%= link_to "新規登録", new_account_registration_path, class: "btn btn-color float-sm-right" %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </nav>

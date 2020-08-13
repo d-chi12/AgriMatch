@@ -7,7 +7,6 @@ class AdminController < ApplicationController
   end
 
   def can_access?
-    @show_sidebar = true
 
     unless current_account
       redirect_to root_url, flash: { danger: "このページを表示するアクセス権がありません" }

@@ -1,7 +1,6 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_account!, only: [:new, :create, :destroy]
-  before_action :set_sidebar, except: [:show]
 
   # GET /properties
   # GET /properties.json
@@ -87,11 +86,6 @@ class PropertiesController < ApplicationController
     def set_property
       @property = Property.find(params[:id])
     end
-
-    def set_sidebar
-      @show_sidebar = true
-    end
-    
 
     # Only allow a list of trusted parameters through.
     def property_params
