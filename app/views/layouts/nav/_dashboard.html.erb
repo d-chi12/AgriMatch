@@ -1,71 +1,56 @@
-<nav class="navbar navbar-expand-md navbar-dark navbar-color">
-  <a class="navbar-brand" href="/public">AgriMatch</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
+<div>
+  <div class="navbar-toggler">
+    <ul>
       <% if account_signed_in? %>
-
-      <li class="nav-item">
-        <%= link_to accounts_path, class: "nav-link" do %>
-          農家一覧 <span class="sr-only">(current)</span>
-        <% end %>
-      </li>
-      <li claszs="nav-item">
-        <%= link_to properties_path, class: "nav-link" do %>
-          新規募集
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <%= link_to posts_path, class: "nav-link" do %>
-          ブログ
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <%= link_to profile_path(current_account), class: "nav-link" do %>
-          Myページ
-        <% end %>
-      </li>
-    
-    <% else %>
-
-      <li class="nav-item">
-          <a class="nav-link" href="/intro">AgriMatchとは<span class="sr-only">(current)</span></a>
-      </li>
-      
-      <li class="nav-item">
-        <%= link_to "ブログ", blog_path, class: "nav-link" %>
-      </li>
-
-    <% end %>
-
-    </ul>
-  
-    <ul class="navbar-nav">
-      <% if account_signed_in? %>
-        <li class="nav-item">
-          <%= link_to new_property_path, class: "nav-link" do %>
-            New Match
-          <% end %>
-        </li>
-        <li class="nav-item">
-          <%= link_to new_post_path, class: "nav-link" do %>
-            ブログ更新
-          <% end %>
-        </li>
-        <li class="nav-item">  
-          <%= link_to "ログアウト", destroy_account_session_path, method: :delete, class: "btn btn-success float-sm-right" %>
+        <li>  
+          <%= link_to "ログアウト", destroy_account_session_path, method: :delete %>
         </li>
       <% else %>
-        <li class="nav-item">
-          <%= link_to "ログイン", new_account_session_path, class: "btn btn-color mr-2 float-sm-right" %>
+        <li>
+          <%= link_to "ログイン", new_account_session_path %>
         </li>
-        <li class="nav-item">  
-          <%= link_to "新規登録", new_account_registration_path, class: "btn btn-color float-sm-right" %>
+        <li>  
+          <%= link_to "新規登録", new_account_registration_path %>
         </li>
       <% end %>
     </ul>
   </div>
-</nav>
+  <div class="hamburger navbar-toggler">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="globalMenuSp">
+    <ul>
+      <% if account_signed_in? %>
+        <li>
+          <a><%= link_to accounts_path do %>
+            農家一覧 <span class="sr-only">(current)</span></a>
+          <% end %>
+        </li>
+        <li>
+          <a><%= link_to properties_path do %>
+            新規募集</a>
+          <% end %>
+        </li>
+        <li>
+          <a><%= link_to posts_path do %>
+            ブログ</a>
+          <% end %>
+        </li>
+        <li>
+          <a><%= link_to profile_path(current_account) do %>
+            Myページ</a>
+          <% end %>
+        </li>
+      <% else %>
+        <li>
+          <a class="nav-link" href="/intro">AgriMatchとは<span class="sr-only">(current)</span></a>
+        </li>
+        <li>
+          <a><%= link_to "ブログ", blog_path %></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
