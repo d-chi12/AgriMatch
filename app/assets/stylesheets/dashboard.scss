@@ -18,7 +18,7 @@
   left: 0;
   z-index: 100; /* Behind the navbar */
   padding: 48px 0 0; /* Height of navbar */
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 767.98px) {
@@ -31,7 +31,7 @@
   position: relative;
   top: 0;
   height: calc(100vh - 48px);
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
@@ -46,7 +46,6 @@
 .sidebar .nav-link {
   font-weight: 500;
   color: #333;
-  
 }
 
 .sidebar .nav-link .feather {
@@ -64,7 +63,7 @@
 }
 
 .sidebar-heading {
-  font-size: .75rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
 }
 
@@ -75,7 +74,7 @@
   height: 360px;
   top: 250px;
   left: 30px;
-  background-color: #B0CA71;
+  background-color: #b0ca71;
 }
 
 #logo {
@@ -100,234 +99,243 @@
  * Navbar
  */
 
+@media screen and (max-width: 767px) {
+  #nav-first {
+    display: none;
+  }
+}
+
 .navbar-brand {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   font-size: 1rem;
-  font-family: 'Fugaz One', cursive;
+  font-family: "Fugaz One", cursive;
 }
 
 .navbar .navbar-toggler {
-  top: .25rem;
+  top: 0.25rem;
   right: 1rem;
 }
 
 .navbar .form-control {
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   border-width: 0;
   border-radius: 0;
 }
 
 .form-control-dark {
   color: #fff;
-  background-color: rgba(255, 255, 255, .1);
-  border-color: rgba(255, 255, 255, .1);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .form-control-dark:focus {
   border-color: transparent;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }
 
 .pro-box {
   padding-top: 20%;
-  padding-left: 60px
+  padding-left: 60px;
 }
 
 /* hamburger meny */
-@media screen and (min-width:767px) {
+@media screen and (min-width: 767px) {
   #nav-drawer {
-    display:none;
+    display: none;
   }
 }
-  .hamburger {
-    display : block;
-    position: fixed;
-    z-index : 3;
-    right : 13px;
-    top   : 12px;
-    width : 42px;
-    height: 42px;
-    cursor: pointer;
-    text-align: center;
-    }
-  .hamburger span {
-    display : block;
-    position: absolute;
-    width   : 30px;
-    height  : 2px ;
-    left    : 6px;
-    background : #555;
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition   : 0.5s ease-in-out;
-    transition        : 0.5s ease-in-out;
-  }
-  .hamburger span:nth-child(1) {
-    top: 10px;
-  }
-  .hamburger span:nth-child(2) {
-    top: 20px;
-  }
-  .hamburger span:nth-child(3) {
-    top: 30px;
-  }
 
-  /* ナビ開いてる時のボタン */
-  .hamburger.active span:nth-child(1) {
-    top : 16px;
-    left: 6px;
-    background : #fff;
-    -webkit-transform: rotate(315deg);
-    -moz-transform   : rotate(315deg);
-    transform        : rotate(315deg);
-  }
+.login {
+  padding: 0 50px;
+}
 
-  .hamburger.active span:nth-child(2),
-  .hamburger.active span:nth-child(3) {
-    top: 16px;
-    background : #fff;
-    -webkit-transform: rotate(-315deg);
-    -moz-transform   : rotate(-315deg);
-    transform        : rotate(-315deg);
-  }
+.hamburger {
+  display: block;
+  position: fixed;
+  z-index: 3;
+  right: 13px;
+  top: 12px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+.hamburger span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  left: 6px;
+  background: #555;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
 
-  .globalMenuSp {
-    position: fixed;
-    z-index : 2;
-    top  : 0;
-    left : 0;
-    color: #fff;
-    background: rgba(0,0,0,0.7);
-    text-align: center;
-    width: 100%;
-    opacity: 0;
-    transition: opacity .6s ease, visibility .6s ease;
-  }
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top: 16px;
+  left: 6px;
+  background: #fff;
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
 
-  .globalMenuSp ul {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-  }
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  background: #fff;
+  -webkit-transform: rotate(-315deg);
+  -moz-transform: rotate(-315deg);
+  transform: rotate(-315deg);
+}
 
-  .globalMenuSp ul li {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    transition: .4s all;
-  }
-  .globalMenuSp ul li:last-child {
-    padding-bottom: 0;
-  }
-  .globalMenuSp ul li:hover{
-    background :#ddd;
-  }
+.globalMenuSp {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
 
-  .globalMenuSp ul li a {
-    display: block;
-    color: #fff;
-    padding: 1em 0;
-    text-decoration :none;
-  }
+.globalMenuSp ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
 
-  /* このクラスを、jQueryで付与・削除する */
-  .globalMenuSp.active {
-    opacity: 100;
+.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  transition: 0.4s all;
+}
+.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+}
+.globalMenuSp ul li:hover {
+  background: #ddd;
+}
 
-  }
+.globalMenuSp ul li a {
+  display: block;
+  color: #fff;
+  padding: 1em 0;
+  text-decoration: none;
+}
 
-  .hamburger {
-    display : block;
-    position: fixed;
-    z-index : 3;
-    right : 13px;
-    top   : 12px;
-    width : 42px;
-    height: 42px;
-    cursor: pointer;
-    text-align: center;
-    }
-  .hamburger span {
-    display : block;
-    position: absolute;
-    width   : 30px;
-    height  : 2px ;
-    left    : 6px;
-    background : #555;
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition   : 0.5s ease-in-out;
-    transition        : 0.5s ease-in-out;
-  }
-  .hamburger span:nth-child(1) {
-    top: 10px;
-  }
-  .hamburger span:nth-child(2) {
-    top: 20px;
-  }
-  .hamburger span:nth-child(3) {
-    top: 30px;
-  }
+/* このクラスを、jQueryで付与・削除する */
+.globalMenuSp.active {
+  opacity: 100;
+}
 
-  /* ナビ開いてる時のボタン */
-  .hamburger.active span:nth-child(1) {
-    top : 16px;
-    left: 6px;
-    background : #fff;
-    -webkit-transform: rotate(315deg);
-    -moz-transform   : rotate(315deg);
-    transform        : rotate(315deg);
-  }
+.hamburger {
+  display: block;
+  position: fixed;
+  z-index: 3;
+  right: 13px;
+  top: 12px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+.hamburger span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  left: 6px;
+  background: #555;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
 
-  .hamburger.active span:nth-child(2),
-  .hamburger.active span:nth-child(3) {
-    top: 16px;
-    background : #fff;
-    -webkit-transform: rotate(-315deg);
-    -moz-transform   : rotate(-315deg);
-    transform        : rotate(-315deg);
-  }
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top: 16px;
+  left: 6px;
+  background: #fff;
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
 
-  .globalMenuSp {
-    position: fixed;
-    z-index : 2;
-    top  : 0;
-    left : 0;
-    color: #fff;
-    background: rgba(0,0,0,0.7);
-    text-align: center;
-    width: 100%;
-    opacity: 0;
-    transition: opacity .6s ease, visibility .6s ease;
-  }
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  background: #fff;
+  -webkit-transform: rotate(-315deg);
+  -moz-transform: rotate(-315deg);
+  transform: rotate(-315deg);
+}
 
-  .globalMenuSp ul {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-  }
+.globalMenuSp {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
 
-  .globalMenuSp ul li {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    transition: .4s all;
-  }
-  .globalMenuSp ul li:last-child {
-    padding-bottom: 0;
-  }
-  .globalMenuSp ul li:hover{
-    background :#ddd;
-  }
+.globalMenuSp ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
 
-  .globalMenuSp ul li a {
-    display: block;
-    color: #fff;
-    padding: 1em 0;
-    text-decoration :none;
-  }
+.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  transition: 0.4s all;
+}
+.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+}
+.globalMenuSp ul li:hover {
+  background: #ddd;
+}
 
-  /* このクラスを、jQueryで付与・削除する */
-  .globalMenuSp.active {
-    opacity: 100;
+.globalMenuSp ul li a {
+  display: block;
+  color: #fff;
+  padding: 1em 0;
+  text-decoration: none;
+}
 
-  }
+/* このクラスを、jQueryで付与・削除する */
+.globalMenuSp.active {
+  opacity: 100;
+}

@@ -1,7 +1,5 @@
-<section class="navbar navbar-expand-md navbar-dark navbar-color">
+<nav class="navbar navbar-expand-md navbar-dark navbar-color" id="nav-first">
   <a class="navbar-brand" href="/public">AgriMatch</a>
-
-
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <% if account_signed_in? %>
@@ -66,49 +64,56 @@
       <% end %>
     </ul>
   </div>
-    <nav class="menu-container" id="nav-drawer">
-      <div>
-        <ul>
-          <% if account_signed_in? %>
-            <li>  
-              <%= link_to "ログアウト", destroy_account_session_path, method: :delete %>
-            </li>
-          <% else %>
-            <li>
-              <%= link_to "ログイン", new_account_session_path %>
-            </li>
-            <li>  
-              <%= link_to "新規登録", new_account_registration_path %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
+</nav>
+
+<nav class="navbar navbar-expand-md navbar-dark navbar-color" id="nav-drawer" >
+  <a class="navbar-brand" href="/public">AgriMatch</a>
+  <div>
+    <nav class="menu-container conteiner" >
+      <ul class="login">
+        <% if account_signed_in? %>
+          <li>  
+            <%= link_to "ログアウト", destroy_account_session_path, method: :delete %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to "ログイン", new_account_session_path %>
+          </li>
+          <li>  
+            <%= link_to "新規登録", new_account_registration_path %>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+    
+    <nav class="menu-container conteiner" >
       <div class="hamburger ">
         <span></span>
         <span></span>
         <span></span>
       </div>
+
       <div class="globalMenuSp">
         <ul>
           <% if account_signed_in? %>
             <li>
-              <a><%= link_to accounts_path do %>
+              <%= link_to accounts_path do %>
                 農家一覧 <span class="sr-only">(current)</span></a>
               <% end %>
             </li>
             <li>
-              <a><%= link_to properties_path do %>
-                新規募集</a>
+              <%= link_to properties_path do %>
+                新規募集
               <% end %>
             </li>
             <li>
-              <a><%= link_to posts_path do %>
-                ブログ</a>
+              <%= link_to posts_path do %>
+                ブログ
               <% end %>
             </li>
             <li>
-              <a><%= link_to profile_path(current_account) do %>
-                Myページ</a>
+              <%= link_to profile_path(current_account) do %>
+                Myページ
               <% end %>
             </li>
           <% else %>
@@ -116,10 +121,13 @@
               <a class="nav-link" href="/intro">AgriMatchとは<span class="sr-only">(current)</span></a>
             </li>
             <li>
-              <a><%= link_to "ブログ", blog_path %></a>
+              <%= link_to blog_path do %>
+                ブログ
+              <% end %>
             </li>
           <% end %>
         </ul>
       </div>
     </nav>
-</section>
+  </div>
+</nav>
