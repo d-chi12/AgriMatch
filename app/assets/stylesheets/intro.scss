@@ -2,212 +2,223 @@ ul {
   list-style: none;
 }
 
-// AfriMatchとは
-
-.p-feature, .p-usage {
-    padding: 80px 0 72px 0;
-    margin: 40px auto 0 auto;
-    width: 92%;
-    background: #FFFFDE;
+.cb-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.l-container, .l-container--pc {
-    position: relative;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 4%;
+// AfriMatchとは
+
+.p-feature,
+.p-usage {
+  padding: 80px 0 72px 0;
+  margin: 40px auto 0 auto;
+  width: 92%;
+  background: #ffffde;
+}
+
+.l-container,
+.l-container--pc {
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 4%;
 }
 
 .p-feature__title {
-    text-align: center;
-    margin: 1.5em 0 1.5em 0;
-    font-size: 4.25rem;
-    background: url(../images/ttl01_bg.png) center 0.3em no-repeat;
-    background-size: 3.5em auto;
-    color: #015a31;
+  text-align: center;
+  margin: 1.5em 0 1.5em 0;
+  font-size: 4.25rem;
+  background: url(../images/ttl01_bg.png) center 0.3em no-repeat;
+  background-size: 3.5em auto;
+  color: #015a31;
 }
 
 .p-feature__text {
-    text-align: center;
-    font-size: 1.5rem;
-    margin: 0 0 5em 0;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0 0 5em 0;
 }
 
 .p-feature__wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .p-feature__item {
-    width: 32%;
-    background: #fff;
-    border: 1px solid #009350;
-    border-radius: 20px;
-    padding: 1.8em 2em 2.4em 2em;
+  width: 32%;
+  background: #fff;
+  border: 1px solid #009350;
+  border-radius: 20px;
+  padding: 1.8em 2em 2.4em 2em;
 }
 
 .p-feature__item__icon {
-    display: block;
-    width: 90px;
-    margin: 28px auto 40px auto;
+  display: block;
+  width: 90px;
+  margin: 28px auto 40px auto;
 }
 
 img {
-    max-width: 100%;
-    vertical-align: bottom;
+  max-width: 100%;
+  vertical-align: bottom;
 }
 img {
-    border-style: none;
+  border-style: none;
 }
 
 .p-feature__item__title {
-    color: #009350;
-    text-align: center;
-    margin: 0 0 32px 0;
-    font-size: 1.875rem;
+  color: #009350;
+  text-align: center;
+  margin: 0 0 32px 0;
+  font-size: 1.875rem;
 }
 
 .p-feature__item__description {
-    font-size: 1rem;
-    color: #444;
-    line-height: 1.8em;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8em;
 }
-
 
 // 取う仕事の例
 
 .p-usage--example {
-    padding: 32px 0;
+  padding: 32px 0;
 }
 
-.l-container, .l-container--pc {
-    /* position: relative; */
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 4%;
+.l-container,
+.l-container--pc {
+  /* position: relative; */
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 4%;
 }
 
 .p-usage--example__title {
-    margin: 0 auto 2em auto;
-    font-size: 2.5rem;
-    color: #015a31;
-    text-align: center;
+  margin: 0 auto 2em auto;
+  font-size: 2.5rem;
+  color: #015a31;
+  text-align: center;
 }
 
 .p-usage--example__task {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .p-usage--example__item {
-    width: 17%;
-    text-align: center;
-    color: #009350;
-    font-size: 1.75rem;
+  width: 17%;
+  text-align: center;
+  color: #009350;
+  font-size: 1.75rem;
 }
 
 // AgriMatch blog
 
 .p-mynavi-agriculture {
-    margin: 40px auto 0 auto;
-    padding: 64px 0;
-    background: #009350;
-    color: #fff;
+  margin: 40px auto 0 auto;
+  padding: 64px 0;
+  background: #009350;
+  color: #fff;
 }
 
-.l-container, .l-container--pc {
-    /* position: relative; */
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 4%;
+.l-container,
+.l-container--pc {
+  /* position: relative; */
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 4%;
 }
 
 .p-mynavi-agriculture__title {
-    margin: 0 auto 2em auto;
-    font-size: 2.5rem;
-    text-align: center;
+  margin: 0 auto 2em auto;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .p-mynavi-agriculture__description {
-    margin: 32px 0 64px 0;
-    text-align: center;
+  margin: 32px 0 64px 0;
+  text-align: center;
 }
 
 .p-mynavi-agriculture__posts {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .p-mynavi-agriculture__item {
-    width: 31%;
-    background: #fff;
-    border-radius: 20px;
-    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
-    -webkit-transition: .2s ease;
-    transition: .2s ease;
+  width: 31%;
+  background: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .p-mynavi-agriculture__item__image {
-    padding-top: 5%;
-    position: relative;
+  padding-top: 5%;
+  position: relative;
 }
 
 .p-mynavi-agriculture__item__tags {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: 17px 28px 0 28px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 17px 28px 0 28px;
 }
 
 .p-mynavi-agriculture__item__tag-item {
-    background: #8EC43D;
-    color: #fff;
-    margin: 0 8px 0 0;
-    padding: 4px 8px;
-    font-size: 12px;
-    border-radius: 4px;
+  background: #8ec43d;
+  color: #fff;
+  margin: 0 8px 0 0;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
 }
 
 .p-mynavi-agriculture__item__title {
-    padding: 20px 40px;
-    color: #666;
+  padding: 20px 40px;
+  color: #666;
 }
 
 .p-mynavi-agriculture__item__description {
-    line-height: 1.8;
-    padding: 0 40px 40px 40px;
-    color: #666;
+  line-height: 1.8;
+  padding: 0 40px 40px 40px;
+  color: #666;
 }
 
 .icon-bottom {
-    margin-bottom: 10%;
+  margin-bottom: 10%;
 }

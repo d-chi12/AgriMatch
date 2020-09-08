@@ -1,24 +1,24 @@
-$(function(){
-  $("#show-tel").on("click", function(){
+$(function () {
+  $("#show-tel").on("click", function () {
     var $this = $(this);
-    $this.find("span").text( $this.data("telephone") );
+    $this.find("span").text($this.data("telephone"));
   });
 
-  $("#toggleDetails").on("click", function(){
+  $("#toggleDetails").on("click", function () {
     var details = $("#prop-details");
     details.toggleClass("open");
-    if(details.hasClass("open")){
+    if (details.hasClass("open")) {
       $(this).text("show less");
     } else {
       $(this).text("show more");
     }
   });
-  $("#send-message-to-agent").on("click", function(){
+  $("#send-message-to-agent").on("click", function () {
     var agent_id = $("#agent_id").val(),
-        first_name = $("#message-first-name").val(),
-        last_name = $("#message-last-name").val(),
-        email = $("#message-email").val(),
-        message = $("#message-text").val()
+      first_name = $("#message-first-name").val(),
+      last_name = $("#message-last-name").val(),
+      email = $("#message-email").val(),
+      message = $("#message-text").val();
 
     $.ajax({
       url: "/agent/message",
@@ -29,31 +29,44 @@ $(function(){
         first_name: first_name,
         last_name: last_name,
         email: email,
-        message: message
+        message: message,
       },
-      success: function(data){
-        $('#contact-model form').remove();
-        $('#send-message-to-agent').remove();
-        $('#contact-model .modal-body').html("<p>Your message has been sent successfully!</p>");
-      }
-    })
+      success: function (data) {
+        $("#contact-model form").remove();
+        $("#send-message-to-agent").remove();
+        $("#contact-model .modal-body").html(
+          "<p>Your message has been sent successfully!</p>"
+        );
+      },
+    });
   });
 
-  $('#contact-modal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget) 
-    var modal = $(this)
-  })
+  $("#contact-modal").on("show.bs.modal", function (event) {
+    var button = $(event.relatedTarget);
+    var modal = $(this);
+  });
 });
 
 // hamburger menu //
-$(function() {
-  $('.hamburger').click(function() {
-      $(this).toggleClass('active');
+$(function () {
+  $(".hamburger").click(function () {
+    $(this).toggleClass("active");
 
-      if ($(this).hasClass('active')) {
-          $('.globalMenuSp').addClass('active');
-      } else {
-          $('.globalMenuSp').removeClass('active');
-      }
+    if ($(this).hasClass("active")) {
+      $(".globalMenuSp").addClass("active");
+    } else {
+      $(".globalMenuSp").removeClass("active");
+    }
+  });
+});
+
+// herderスクロール固定 //
+$(function () {
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 0) {
+      $(".cb-header").slideDown();
+    } else {
+      $(".cb-header").slideUp();
+    }
   });
 });

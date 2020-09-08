@@ -9,13 +9,15 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_pack_tag 'application' %>
 
-<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body id="<%= controller.controller_name %>" class="<%= controller.action_name %><%= "show-sidebar" if@show_sidebar.present? %>">
   <% if @show_sidebar.nil? %>
   <header>
-    <%= render "layouts/nav/public" %>
+    <div class="cb-header">
+      <%= render "layouts/nav/public" %>
+    </div>
   </header>
 
   <%= yield %>
@@ -44,7 +46,7 @@
 
   <script>
     feather.replace()
-  </script> 
+  </script>
 
 </body>
 
